@@ -8,9 +8,9 @@
     <version>1.0</version>
     <developers>
         <developer>
-            <id><!-- TODO: your id --></id>
-            <name><!-- TODO: your name --></name>
-            <email><!-- TODO: your email --></email>
+            <id>JohanCorn</id>
+            <name>Szabó Erhard Pál</name>
+            <email>johancorn@mailbox.unideb.hu</email>
             <organization>Faculty of Informatics</organization>
             <organizationUrl>https://www.inf.unideb.hu/</organizationUrl>
         </developer>
@@ -110,6 +110,13 @@
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>${jacoco.version}</version>
+                <configuration>
+                    <excludes>
+                        <exclude>com/baeldung/**/ExcludedPOJO.class</exclude>
+                        <exclude>com/baeldung/**/*DTO.*</exclude>
+                        <exclude>**/config/*</exclude>
+                    </excludes>
+                </configuration>
                 <reportSets>
                     <reportSet>
                         <reports>
